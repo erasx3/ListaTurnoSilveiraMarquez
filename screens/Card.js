@@ -10,18 +10,6 @@ const Card = () =>{
                 <Text style={styles.p}>Nombre:</Text>
                 <Text style={styles.p}> xxxxxx</Text>
             </View>
-            <View style={styles.row}>
-                <Text style={styles.p}>dia:</Text>
-                <Text style={styles.p}> xx / xx / xx</Text>
-            </View>
-            <View style={styles.row}>
-                <Text style={styles.p}>hora:</Text>
-                <Text style={styles.p}> xx : xx</Text>
-            </View>
-            <View style={styles.row}>
-                <Text style={styles.p}>estado:</Text>
-                <Text style={styles.p}> xxxxxx</Text>
-            </View>
             <View style={styles.row2}>
                 <Button title="Realizado" color={COLORS.green}/>
                 <Button title="Cancelar" color={COLORS.red}/>

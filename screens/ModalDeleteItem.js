@@ -1,39 +1,27 @@
-import { Button, Modal, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Modal, StyleSheet, Text, View } from 'react-native';
 
 import COLORS from '../constants/colors';
 import React from 'react';
 
-function ModalAddItem({
-    handleAddItem,
-    modalVisibleAddItem,
-    closeAddItemModal,
-    inputText,
-    handleInputChange,
+function ModalDeleteItem({
+    modalVisibleDeleteItem,
+    closeDeleteItemModal,
 }){
     return(
-        <Modal visible={modalVisibleAddItem} animation="slide" transparent>
+        <Modal visible={modalVisibleDeleteItem} animation="slide" transparent>
             <View style={styles.container}>
                 <View style={styles.content}>
                     <View style={styles.row}>
                         <Text style={styles.p}>Nombre:</Text>
-                        <TextInput onChangeText={handleInputChange} placeholder="nombre" style={styles.inputText} value={inputText}/>
+                        <Text style={styles.p}></Text>
                     </View>
                     <View style={styles.row2}>
-                        <Button onPress={handleAddItem} title="Realizado" color={COLORS.yellow}/>
-                        <Button onPress={closeAddItemModal} title="Cancelar" color={COLORS.red} />
+                        <Button onPress={closeDeleteItemModal} title="Cancelar" color={COLORS.red} />
                     </View>
                 </View>
             </View>
         </Modal>
-    )
-}
-
-
-
-
-//function ModalAddItem(modalVisibleAddItem,inputText,handleInputText){
-    
-//}
+)}
 
 const styles = StyleSheet.create({
     container: {
@@ -57,12 +45,10 @@ const styles = StyleSheet.create({
     },
     row:{
         flexDirection:'row',
-        //width: '100%',
         justifyContent: 'center',
     },
     row2:{
         flexDirection:'row',
-        //width: '100%',
         justifyContent: 'space-between'
     },
     p:{
@@ -83,4 +69,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default ModalAddItem;
+export default ModalDeleteItem;
